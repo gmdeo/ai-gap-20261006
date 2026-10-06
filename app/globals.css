@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: oklch(98% 0 0);
+  --surface-color: oklch(100% 0 0);
+  --border-color: oklch(88% 0 0);
+  --text-primary: oklch(18% 0 0);
+  --text-secondary: oklch(42% 0 0);
+  --accent-primary: oklch(58% 0.15 250);
+  --accent-hover: oklch(52% 0.15 250);
+  --success: oklch(62% 0.14 145);
+  --warning: oklch(72% 0.14 65);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: oklch(14% 0 0);
+    --surface-color: oklch(18% 0 0);
+    --border-color: oklch(28% 0 0);
+    --text-primary: oklch(96% 0 0);
+    --text-secondary: oklch(68% 0 0);
+    --accent-primary: oklch(68% 0.12 250);
+    --accent-hover: oklch(74% 0.12 250);
+    --success: oklch(72% 0.12 145);
+    --warning: oklch(78% 0.12 65);
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
